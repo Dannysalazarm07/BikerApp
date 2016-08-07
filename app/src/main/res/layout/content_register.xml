@@ -19,7 +19,7 @@
         android:id="@+id/aceptButton2"
         android:layout_x="160dp"
         android:layout_y="194dp"
-        android:layout_below="@+id/passwordButton2"
+        android:layout_below="@+id/passwordButton3"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -63,4 +63,24 @@
         android:layout_below="@+id/password"
         android:layout_alignLeft="@+id/emailButton2"
         android:layout_alignStart="@+id/emailButton2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/passwordButton3"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/passwordButton2"
+        android:layout_alignStart="@+id/passwordButton2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Repetir contraseña"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/passwordButton2"
+        android:layout_alignRight="@+id/email"
+        android:layout_alignEnd="@+id/email" />
 </RelativeLayout>
