@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.firebase.client.AuthData;
+import com.firebase.client.Firebase;
+
 import java.util.Hashtable;
 
 public class LoginActivity extends AppCompatActivity {
@@ -31,6 +34,18 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                Firebase fireBaseRefernce = new Firebase("https://bikeraplicationdb-882b6.firebaseio.com/");
+
+                fireBaseRefernce.addAuthStateListener(new Firebase.AuthStateListener() {
+                    @Override
+                    public void onAuthStateChanged(AuthData authData) {
+
+                    }
+                });
+
+
+
 
 
 
