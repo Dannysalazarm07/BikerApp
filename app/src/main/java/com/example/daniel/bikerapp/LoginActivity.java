@@ -16,38 +16,34 @@ import java.util.Hashtable;
 
 public class LoginActivity extends AppCompatActivity {
 
-
-    //Hashtable dataBase = new Hashtable();
+    Toolbar toolbar;
+    Button acept;
+    DataBase dataBase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ClassShared.dataHash();
+        dataBase = new DataBase();
 
-        Button acept = (Button) findViewById(R.id.aceptButton);
+        acept = (Button) findViewById(R.id.aceptButton);
 
         acept.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
 
-                Firebase fireBaseRefernce = new Firebase("https://bikeraplicationdb-882b6.firebaseio.com/");
 
-                fireBaseRefernce.addAuthStateListener(new Firebase.AuthStateListener() {
-                    @Override
-                    public void onAuthStateChanged(AuthData authData) {
-
-                    }
-                });
+                dataBase.createUser(new User("miatorresch@unal.edu.co", "secret", "FECHA"));
 
 
 
 
-
+                /*
 
                 String user = ((EditText)findViewById(R.id.emailButton2)).getText().toString();
                 String password = ((EditText)findViewById(R.id.passwordButton2)).getText().toString();
@@ -62,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Correo o contrasena incorrecta", Toast.LENGTH_SHORT).show();
                 }
+                */
             }
         });
 
