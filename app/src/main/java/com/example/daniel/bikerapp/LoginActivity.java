@@ -36,8 +36,6 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
-
                 dataBase.createUser(new User("miatorresch@unal.edu.co", "secret", "FECHA"));
 
 
@@ -58,7 +56,9 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Correo o contrasena incorrecta", Toast.LENGTH_SHORT).show();
                 }
+
                 */
+
             }
         });
 
